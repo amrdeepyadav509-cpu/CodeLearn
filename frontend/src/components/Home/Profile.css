@@ -1,0 +1,114 @@
+.profile-card {
+  position: absolute;
+  top: 0;
+  right: 0px;
+ 
+  width: 90px;
+  height: 70px;
+  background-color: transparent;
+  border-radius: 15px;
+margin: 0px;
+padding: 0px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: all 0.5s ease;
+
+
+  z-index: 3;
+}
+
+/* Expanded card */
+.profile-card.active {
+  width: 350px;
+  height: 500px;
+  background: rgb(210, 89, 210);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(123, 97, 255, 0.2);
+  font-size: 16px;
+  color: #0c1222;
+}
+
+/* Profile icon for collapsed state */
+.profile-card i {
+  font-size: 50px;
+  color: #221414;
+  transition: color 0.3s;
+}
+
+/* Hide icon in active */
+.profile-card.active i {
+  color: transparent;
+  font-size: 2px;
+}
+
+/* Profile image */
+.profile-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 15px;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
+/* Text */
+.profile-card h3 {
+  margin: 10px 0 5px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.profile-card p {
+  color: rgba(12, 18, 34, 0.8);
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.profile-card button {
+  margin-top: 20px;
+  background: linear-gradient(90deg, #7b61ff, #3ddc97);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  color: #081026;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(123, 97, 255, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 25px rgba(123, 97, 255, 0.3);
+}
+
+/* Form inputs */
+.profile-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-card input[type="text"],
+.profile-card input[type="file"] {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.profile-card input[type="text"]:focus {
+  border-color: #7b61ff;
+}
+
+.profile-card input[type="file"] {
+  background: #fff;
+}
