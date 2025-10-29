@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-
+import Login from './components/Auth/Login';
+import Register from './components/Auth/Register';
 import Home from './components/Home/Home';
 import Learn1 from './components/Learn/Learn1';
 import Learn2 from './components/Learn/Learn2';
@@ -21,7 +22,8 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
-    
+            <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
 
         <Route path="/learn/1" element={<PrivateRoute><Learn1/></PrivateRoute>} />
         <Route path="/learn/2" element={<PrivateRoute><Learn2/></PrivateRoute>} />
